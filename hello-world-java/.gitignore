@@ -1,0 +1,11 @@
+*.idea
+*.jar
+*.class
+
+# Ignorar carpetas de Eclipse
+.settings/
+.project
+.classpath
+
+# Ignorar carpetas de Maven
+target/
