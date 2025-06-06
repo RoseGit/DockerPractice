@@ -35,3 +35,18 @@ FROM openjdk:21-slim
 EXPOSE 5000
 COPY --from=build /home/app/target/*.jar app.jar
 ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
+
+# Mediante el plugin de maven que viene por default en un projecto spring boot
+# Se puede generar la imagen de docker con ayuda del comando se debe de quitar el archivo Dockerfile
+# mvn spring-boot:build-image(Build a container image)
+#<build>
+#		<plugins>
+#			<plugin>
+#				<groupId>org.springframework.boot</groupId>
+#				<artifactId>spring-boot-maven-plugin</artifactId>
+#			</plugin>
+#		</plugins>
+#	</build> 
+# Otros comandos utiles son 
+# mvn spring-boot:repackage(create a jar o war file)
+# mvn spring-boot:run(run application)
